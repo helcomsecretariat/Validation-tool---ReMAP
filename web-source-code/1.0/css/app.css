@@ -1,0 +1,169 @@
+
+html, body {
+	position:absolute;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	color: #00497F;
+}
+
+#mainWindow {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+
+#screenCover {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+	opacity: 0.5;
+	display: none;
+}
+
+#loadingCover {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/loading.gif');
+  /*background-image: url('../img/easter.png');*/
+  opacity: 0.4;
+}
+
+.popupLoadingCover {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/loading.gif');
+  opacity: 0.4;
+	display: none;
+}
+
+/* START header section */
+#header {
+	position: relative;
+	border-bottom: solid 4px #00497F;
+	background-color: #B2C8D8;
+	overflow: hidden;
+	text-align: left;
+	padding: 0px 0px;
+}
+
+#helcomlogocontainer {
+  background-image: url("../img/HELCOM_logo_white_h50.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 240px;
+  height: 60px;
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+#titlecontainer {
+  color: white;
+  font-size: 20pt;
+  float: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+.headerLink {
+	font-size: 16px;
+	color: #00497F;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.headerLink:hover {
+ 	color: white;
+}
+/* END header section */
+
+.mainLink {
+	color: rgb(0, 153, 204);
+	cursor: pointer;
+}
+
+.mainLink:hover {
+	text-decoration: underline;
+}
+
+.metadataRow {
+	margin-bottom: 5px;
+	margin-top: 5px;
+	display: table;
+	table-layout: fixed;
+	border-bottom: 1px solid #cccccc;
+}
+
+.layerNameCell {
+	width: 250px;
+	padding-right: 10px;
+	display: table-cell;
+	word-wrap: break-word;
+}
+
+.buttonCell {
+	padding-right: 10px;
+	display: table-cell;
+	word-wrap: break-word;
+	color: rgb(0, 153, 204);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.buttonCell:hover {
+	text-decoration: underline;
+}
+
+.blueButton {
+	border: 2px solid #00365C;
+	background-color: #004A7F;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 150px;
+	height: 27px;
+	line-height: 27px;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	margin: 10px 10px 10px 0px;
+	padding: 0px 10px;
+}
+
+.blueButton:hover {
+	font-weight: bold;
+}
+
+.selectWidget {
+	font-size: 14px;
+	width: 200px;
+	border-width: 0px;
+}

@@ -1,0 +1,47 @@
+{
+	"services": {
+		"get_datasets": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/4",
+		"get_geometries": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/3",
+		"get_attributes": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/2",
+		"get_attribute_info": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/6",
+		"get_codes": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/1",
+		"get_code_info": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/5",
+		"get_categories_info": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/7",
+		"get_datasets_for_areas": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/database/MapServer/9",
+		"upload_file": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/uploads/upload",
+		"get_featuretypes_wfs": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/getWfsFeatureTypes",
+		"get_attributes_shp": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/getShpAttributes",
+		"get_attributes_wfs": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/getWfsAttributes",
+		"get_unique_values": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/getAttributeUniqueValues",
+		"validate_dataset": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/validateDataset",
+		"upload_dataset": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/uploadDataset",
+		"validate_raster": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/validateRaster",
+		"upload_raster": "https://maps.helcom.fi/arcgis/rest/services/Input_dataset_validation/tools/GPServer/uploadRaster"
+	},
+	"study_areas": {
+		"1": {
+			"title": "Baltic Sea",
+			"output_folder": "... path to output folder ..."
+		},
+		"2": {
+			"title": "Galicia",
+			"output_folder": "... path to output folder ..."
+		},
+		"3": {
+			"title": "Northwestern Mediterranean",
+			"output_folder": "... path to output folder ..."
+		}
+	},
+	"dataset_categories": {
+		"1": {
+			"id": 1,
+			"title": "Human activities and pressure layers",
+			"output_gdb": "Human_activities_and_pressures.gdb"
+		},
+		"2": {
+			"id": 2,
+			"title": "Ecosystem components",
+			"output_gdb": "Ecosystem_components.gdb"
+		}
+	}
+}
