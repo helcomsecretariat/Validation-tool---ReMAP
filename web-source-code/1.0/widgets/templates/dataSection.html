@@ -1,0 +1,123 @@
+<div>
+	<div style="margin: 0px 20px;">
+		<div style="width: 100%; height: 800px; margin-bottom: 10px;">
+			<div id="menu_line" style="margin-bottom: 10px;">
+				<!--<span id="logout_menu" class="mainLink" style="margin-right: 20px;">Logout</span>-->
+				<span id="restart_menu" class="mainLink" style="margin-right: 20px;">Restart validation</span>
+				<span id="about_menu" class="mainLink" style="margin-right: 20px;">About validation tool</span>
+				<span id="logout_menu" class="mainLink" style="margin-left: 20px; float: right; display: none;">Logout</span>
+				<span id="logged_menu" style="margin-left: 20px; float: right"></span>
+			</div>
+			<div id="pages" style="font-size: 12px;">
+				<div id="validate_page">
+					<div style="font-size: 28px;">Validate input dataset</div>
+					<div id="action_error_message" style="margin-top: 25px; color: #B73C2B; display: none;"></div>
+					<div id="selection_section">
+						<div id="area_container" style="display: none;">
+							<div id="area_select_container">
+								<div style="margin-top: 10px;">Please, select the sea area you represent.</div>
+								<div id="area_select" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+							</div>
+							<div id="confirm_area_button" class="mainLink" style="margin-top: 5px;">Confirm selection</div>
+						</div>
+						<div id="category_container" style="display: none;">	
+							<div id="category_select_container">
+								<div style="margin-top: 10px;">Please, select the type of dataset you want to validate.</div>
+								<div id="category_select" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+							</div>
+							<div id="confirm_category_button" class="mainLink" style="margin-top: 5px;">Confirm selection</div>
+						</div>
+						<div id="dataset_select_container" style="display: none;">
+							<div id="dataset_list_message" style="margin-top: 10px; color: rgb(128, 0, 0);"></div>
+							<div id="dataset_list" style="margin-top: 10px;"></div>
+						</div>
+						<div id="back_button_up" class="mainLink" style="margin-top: 5px; display: none;">Back to dataset selection</div>
+						<div id="validation_container" style="display: none;">
+							<div id="dataset_container" style="border: 1px dashed #cccccc; margin: 5px 0px 5px 0px; padding: 5px; width: 47%; float: left; display: none;"></div>
+							<div id="upload_container" style="border: 1px dashed #cccccc; margin: 5px 0px 5px 10px; padding: 5px; width: 47%; float: left; display: none;">
+								<div id="upload_title" style="color: rgb(128, 0, 0);"></div>
+								<div id="upload_message" style="margin-top: 5px; color: rgb(128, 0, 0);">Select dataset format:</div>
+								<div style="margin-left: 10px;">
+									<span id="upload_shp_button" class="mainLink" style="margin-right: 10px;">Shapefile</span>
+									<span id="upload_wfs_button" class="mainLink" style="margin-right: 10px;">WFS</span>
+									<span id="upload_tif_button" class="mainLink" style="margin-right: 10px;">TIF</span>
+								</div>
+								<div id="shp_container" style="margin-left: 10px; display: none;">
+									<form id="select_shp_input_form" style="margin-top: 5px;" method="post" enctype="multipart/form-data">
+										<label for="select_shp_input">Select a ZIP archive with 1 Shapefile</label><br/>
+										<input id="select_shp_input" type="file"/>
+									</form>
+									<div id="upload_shp_for_validation_button" class="mainLink" style="margin-top: 5px; display: none;">Upload Shapefile for validation</div>
+								</div>
+								<div id="wfs_container" style="margin-left: 10px; display: none;">
+									<label for="select_wfs_input">Input WFS url (without any parameters)</label><br/>
+									<input id="select_wfs_input" type="text" style="width: 100%; height: 20px;"/>
+									<div id="get_featuretypes_button" class="mainLink" style="margin-top: 5px;">Get WFS feature types</div>
+									<div id="featuretype_select_container" style="display: none;">
+										<div style="margin-top: 5px;">Please, select WFS feature type.</div>
+										<div id="featuretype_select" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+										<div id="upload_wfs_for_validation_button" class="mainLink" style="margin-top: 5px;">Upload WFS feature type for validation</div>
+									</div>
+								</div>
+								<div id="tif_container" style="margin-left: 10px; display: none;">
+									<form id="select_tif_input_form" style="margin-top: 5px;" method="post" enctype="multipart/form-data">
+										<label for="select_tif_input">Select a ZIP archive with 1 TIF file</label><br/>
+										<input id="select_tif_input" type="file"/>
+									</form>
+									<div id="upload_tif_for_validation_button" class="mainLink" style="margin-top: 5px; display: none;">Upload TIF file for validation</div>
+								</div>
+								<div id="upload_report_container" style="border: 1px dashed #cccccc; margin: 5px 0px 0px 20px; padding: 5px; display: none;"></div>
+								<div id="filtering_container" style="display: none;">
+									<div style="margin-top: 5px; color: rgb(128, 0, 0);">Does uploaded dataset need to be filtered?</div>
+									<span id="filtering_yes_button" class="mainLink" style="margin-left: 10px; margin-right: 10px;">Yes</span>
+									<span id="filtering_no_button" class="mainLink" style="margin-right: 10px;">No</span>
+									<div id="filtering_settings_container" style="margin-left: 10px; display: none;">
+										<label for="query_input">Query (for example: year > 2020 or status = 'operational')</label><br/>
+										<input id="query_input" type="text" style="width: 100%; height: 20px;"/>
+									</div>
+								</div>
+								<div id="fields_container" style="display: none;"></div>
+								<div id="validate_button" class="mainLink" style="margin-top: 5px; display: none;">Validate dataset</div>
+								<div id="validate_report_container" style="border: 1px dashed #cccccc; margin: 5px 0px 0px 20px; padding: 5px; display: none;"></div>
+								<div id="dataset_report_container" style="border: 1px dashed #cccccc; margin: 5px 0px 0px 20px; padding: 5px; display: none;"></div>
+								<div id="save_report_container" style="border: 1px dashed #cccccc; margin: 5px 0px 0px 20px; padding: 5px; display: none;"></div>
+								<div id="new_validation_success_button" class="mainLink" style="margin-top: 10px; display: none;">New validation</div>
+								<div id="report_error_container" style="border: 1px dashed #cccccc; margin: 5px 0px 0px 10px; padding: 5px; display: none;"></div>
+							</div>
+						</div>
+						<div id="start_upload_button" class="mainLink" style="margin-top: 5px; clear: both; display: none;">Start validation</div>
+						<!--<div id="dataset_select_container" style="display: none;">
+							<div style="margin-top: 25px;">Select a dataset to validate</div>
+							<div id="dataset_select" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+						</div>
+						<div id="dataset_type_select_container" style="display: none;">
+							<div style="margin-top: 25px;">Select a dataset type to validate</div>
+							<div id="dataset_type_select" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+						</div>
+						<div id="mandatory_fields_container" style="margin-top: 25px; display: none;"></div>-->
+						<div id="select_file_container"style="margin-top: 25px; display: none;">
+							<form id="select_file_input_form" method="post" enctype="multipart/form-data">
+								<label for="select_file_input">Select an XLSX file to validate</label><br/>
+								<input id="select_file_input" type="file"/>
+							</form>
+							<div id="select_file_message" style="margin-top: 10px; color: #B73C2B; display: none;"></div>
+						</div>
+						<div id="validate_button" class="blueButton" style="margin-top: 25px; display: none;">Validate</div>
+					</div>
+					<div id="validation_results_section" style="display: none;">
+						<div id="upload_file_message" style="margin-top: 25px; display: none;"></div>
+						<div id="upload_file_error_message" style="margin-top: 25px; color: #B73C2B; display: none;"></div>
+						<div id="new_validation_button" class="blueButton" style="margin-top: 25px;">New validation</div>
+						<div id="validation_report_section" style="margin-top: 25px;  display: none;"></div>
+						<div id="upload_button" class="blueButton" style="margin-top: 25px; display: none;">Upload</div>
+					</div>
+					<div id="upload_results_section" style="display: none;">
+						<div id="upload_data_message" style="margin-top: 25px; display: none;"></div>
+						<div id="upload_data_error_message" style="margin-top: 25px; color: #B73C2B; display: none;"></div>
+						<div id="upload_report_section" style="margin-top: 25px;  display: none;"></div>
+						<div id="new_validation_button_2" class="blueButton" style="margin-top: 25px;">New validation</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
